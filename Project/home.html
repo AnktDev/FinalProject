@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses</title>
+<style>
+    body {
+        background-color: #c0c5e3d0; /* Off-white */
+        
+      }
+      header {
+        background-color: #114dda;;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+      
+    .card {
+        width: 200px;
+        height: 300px;
+        perspective: 1000px;
+        margin: 30px;
+        padding:  40px;
+        float: left;
+      }
+      
+      .card-inner {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+      }
+      
+      .card:hover .card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .card-front,
+      .card-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .card-front {
+        background-color: #FF7F50; /* Coral */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 24px;
+        border: 2px solid #FF6347; /* Tomato */
+      }
+      
+      .card-back {
+        background-color: #20B2AA; /* Light Sea Green */
+        transform: rotateY(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 18px;
+        border: 2px solid #3CB371; /* Medium Sea Green */
+      }
+      
+      .card-back ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .card-back ul li {
+        margin-bottom: 10px;
+      }
+      a {
+        color:#fff1f1;
+        text-decoration: none;
+        font-family: sans-serif;
+        text-align: left;
+        display: block;
+        font-size: medium;
+        font-weight: 500;
+    }
+      
+</style>
+</head>
+<body>
+  <header>
+    <div class="header-bar">
+        <nav>
+          <a href="source.html">HOME</a>
+        </nav>
+    </div>
+    <h1>Welcome</h1>
+    <h3>Get ready to fun and learn: Access Our Free Demo Games Now!</h3>
+</header>
+
+<div class="card">
+  <div class="card-inner">
+    <div class="card-front">
+      <h2>Course 1</h2>
+    </div>
+    <div class="card-back">
+      <ul>
+        <li><a href="game1.html">Game 1</a></li>
+        <li><a href="game2.html">Game 2</a></li>
+        <li><a href="game3.html">Game 3</a></li>
+        <li><a href="game4.html">Game 4</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-inner">
+    <div class="card-front">
+      <h2>Course 2</h2>
+    </div>
+    <div class="card-back">
+      <ul>
+        <li><a href="game10.html">Game 5</a>  </li>
+        <li><a href="game5.html">Game 6</a>  </li>
+        <li><a href="game9.html">Game 7</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-inner">
+    <div class="card-front">
+      <h2>Course 3</h2>
+    </div>
+    <div class="card-back">
+      <ul>
+        <li><a href="game7.html">Game 8</a></li>
+        <li><a href="game11.html">Game 9</a></li>
+        <li><a href="game8.html">Game 10</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

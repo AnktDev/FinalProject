@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory Card Game</title>
+<style>
+body{
+    background-color: #f2abab;
+}
+    .back-button {
+        position: fixed;
+        bottom: 20px; /* Adjust as needed */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #007bff; /* Blue color */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    
+      /* Hover effect for the button */
+      .back-button:hover {
+        background-color: #0056b3; /* Darker shade of blue */
+      }
+    .card {
+        width: 100px;
+        height: 88px;
+        background-color: #ae7ccf;
+        margin: 5px;
+        display: inline-block;
+        text-align: center;
+        line-height: 100px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+   
+</style>
+</head>
+<body>
+<h1 style="text-align: center;">Memory Card Game</h1>
+
+<header>
+    <button class="back-button" onclick="goBack()">Back</button>
+  </header>
+<div id="gameBoard" style="text-align: center;"></div>
+
+<script>
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    let gameBoard = document.getElementById('gameBoard');
+    let boardSize = 4; // Change this to adjust the board size
+    let cards = [];
+    let revealedCards = [];
+    let matchedPairs = 0;
+
+    // Generate random letters for the game board
+    function generateBoard() {
+        let cardValues = (letters + letters).split('').sort(() => Math.random() - 0.5).slice(0, boardSize * boardSize / 2);
+        cardValues = cardValues.concat(cardValues); // Duplicate to make pairs
+        cardValues = cardValues.sort(() => Math.random() - 0.5);
+        for (let i = 0; i < boardSize; i++) {
+            let row = [];
+            for (let j = 0; j < boardSize; j++) {
+                let card = document.createElement('div');
+                card.className = 'card';
+                card.dataset.value = cardValues.pop();
+                card.addEventListener('click', flipCard);
+                row.push(card);
+                gameBoard.appendChild(card);
+            }
+            cards.push(row);
+            gameBoard.appendChild(document.createElement('br'));
+        }
+    }
+
+    // Flip the card and check for matches
+    function flipCard() {
+        if (revealedCards.length < 2 && !revealedCards.includes(this)) {
+            this.innerText = this.dataset.value;
+            revealedCards.push(this);
+        }
+        if (revealedCards.length === 2) {
+            setTimeout(checkMatch, 1000);
+        }
+    }
+
+    // Check if the revealed cards match
+    function checkMatch() {
+        if (revealedCards[0].dataset.value === revealedCards[1].dataset.value) {
+            revealedCards[0].style.backgroundColor = 'lightgreen';
+            revealedCards[1].style.backgroundColor = 'lightgreen';
+            revealedCards = [];
+            matchedPairs++;
+            if (matchedPairs === boardSize * boardSize / 2) {
+                alert('Congratulations! You win!');
+            }
+        } else {
+            revealedCards[0].innerText = '';
+            revealedCards[1].innerText = '';
+            revealedCards = [];
+        }
+    }
+
+    // JavaScript function to go back to the previous page
+function goBack() {
+    window.history.back();
+  }
+
+    // Initialize the game
+    generateBoard();
+</script>
+</body>
+</html>

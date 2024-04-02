@@ -1,0 +1,78 @@
+<!-- Index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Minesweeper Game</title>
+    <style>
+        /* Styles.css */
+body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff; /* Blue color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Hover effect for the button */
+  .back-button:hover {
+    background-color: #0056b3; /* Darker shade of blue */
+  }
+.board {
+	display: inline-block;
+	margin: 20px;
+}
+.cell {
+	width: 30px;
+	height: 30px;
+	border: 1px solid #ccc;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 20px;
+	cursor: pointer;
+
+	/* Default color for unrevealed tiles */
+	background-color: #eee;
+
+	/* Default color for unrevealed tile text */
+	color: #333;
+}
+.revealed {
+	/* Color for revealed tiles */
+	background-color: #ccc;
+
+	/* Color for revealed tile text */
+	color: #000;
+}
+.mine {
+	/* Color for mines */
+	background-color: #ff3333;
+}
+
+    </style>
+</head>
+<link rel="stylesheet" href="./style.css">
+
+<body>
+	<header>
+		<button class="back-button" onclick="goBack()">Back</button>
+	  </header>
+	<h1>Minesweeper</h1>
+	<div id="gameBoard"></div>
+</body>
+<script src="gme8script.js"></script>
+
+</html>
+

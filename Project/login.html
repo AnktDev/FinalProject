@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        .back-button {
+            position: fixed;
+            bottom: 20px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #007bff; /* Blue color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          }
+        
+          /* Hover effect for the button */
+          .back-button:hover {
+            background-color: #0056b3; /* Darker shade of blue */
+          }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #0f9496;
+        }
+
+        header {
+            background-color: #114dda;;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(12, 13, 10, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        a {
+            color:#fff1f1;
+            text-decoration: none;
+            font-family:  serif;
+            text-align: left;
+            display: block;
+        }
+
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(6, 8, 5, 0.1);
+            width: 300px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-bar">
+            <nav>
+              <a href="source.html">HOME</a>
+            </nav>
+        </div>
+        
+            <button class="back-button" onclick="goBack()">Back</button>
+          
+    </header>
+    <section>
+    <form action="login.php" method="POST">
+        <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Login">
+    </form>
+    </section>
+    <script>
+        // JavaScript function to go back to the previous page
+function goBack() {
+    window.history.back();
+  }
+    </script>
+</body>
+</html>

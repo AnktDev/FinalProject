@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rewards - [Your Website Name]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c0c5e3d0;
+            color: #333;
+        }
+        header {
+            background-color: #114dda;;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        a {
+            color: #fff1f1;
+            text-decoration: none;
+            font-family:  serif;
+            text-align: left;
+            display: block;
+        }
+        p {
+            color: #666;
+        }
+        .reward {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        #currentReward {
+            font-weight: bold;
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-bar">
+            <nav>
+              <a href="source.html">HOME</a>
+            </nav>
+        </div>
+        <h1> Rewards </h1>
+    </header>
+
+    <section>
+        <h2>Our Rewards Program</h2>
+        <p>Join our rewards program and unlock exciting benefits and perks as you engage with our platform. Earn points, achieve milestones, and redeem rewards for a richer learning experience.</p>
+
+        <div class="reward">
+            <h3>Bronze Level</h3>
+            <p>Unlock basic rewards such as exclusive content and early access to new courses.</p>
+            <p>Points Needed: 100</p>
+        </div>
+
+        <div class="reward">
+            <h3>Silver Level</h3>
+            <p>Enjoy additional benefits like discounts on premium courses and priority support.</p>
+            <p>Points Needed: 250</p>
+        </div>
+
+        <div class="reward">
+            <h3>Gold Level</h3>
+            <p>Experience the VIP treatment with personalized coaching sessions and special event invitations.</p>
+            <p>Points Needed: 500</p>
+        </div>
+
+        <!-- Add more reward levels as needed -->
+
+        <p>Your Current Reward Level: <span id="currentReward">Silver Level</span></p>
+        <p>Start earning points today and elevate your learning journey with VidyaGuru!</p>
+    </section>
+
+    <script>
+        // Simulated user data (replace this with real data or fetch from a server)
+        const userPoints = 300;
+
+        // Determine the current reward level based on user points
+        let currentRewardLevel = "Bronze Level";
+        if (userPoints >= 250) {
+            currentRewardLevel = "Silver Level";
+        }
+        if (userPoints >= 500) {
+            currentRewardLevel = "Gold Level";
+        }
+
+        // Display the current reward level
+        document.getElementById("currentReward").textContent = currentRewardLevel;
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Webpage</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Add this in the head section of your HTML file -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-HeyaTMVpVpR3DqlGKFn5uFeV6YO5n15PFe8vWtM+6XkOyddHbsZrLCkrmtQlPTVv" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            overflow-x: hidden;
+            background-size: 100px 150px; 
+        }
+
+        header {
+            background-color: #114dda;
+            padding: 1em; /* Adjust the padding as needed */
+            text-align: center;
+            color:white;
+            line-height: 1; /* Adjust the line-height as needed */
+            height: auto
+
+        }
+
+        nav {
+            background-color: #27378775;
+            overflow: hidden;
+            
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color:white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+	
+	.header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-bar div {
+            margin: 0 10px;
+            
+        }
+
+        .header-bar nav a {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .slider1,
+        .slider2 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place sliders behind other content */
+        }
+
+        .slick-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+        }
+
+         section p {
+            font-size: 14px; /* Adjust the font size as needed */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 0px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer div {
+            margin: 0 0;
+            width: 20%; /* Adjust the width as needed */
+            font-size: 14px; /* Adjust the font size as needed */
+        }
+    </style>
+</head>
+
+<body>
+
+   <header>
+        <div class="header-bar">
+            <h1>VidyaGuru</h1>
+            <nav>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+              <!---  <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">LinkedIn</a> -->
+            </nav>
+        </div>
+        <p>Welcome to GamiiShiksha to play and learn.</p>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="courses.html">Courses</a>
+        <a href="reward.html">Rewards</a>
+        <a href="blog.html">Blog</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="login.html" style="float: right;font-weight:bold">Login</a>
+    </nav>
+
+    <div class="slider1">
+        <div><img src="https://media.istockphoto.com/id/183361918/photo/preschool-age-children-in-music-class.jpg?s=612x612&w=0&k=20&c=lNtJ0Vq9XhrH8CTQ4XghmTyYU8bF9B81EXkob28fMcA=" alt="Slide 1,happy child"></div>
+        <div><img src="https://img.freepik.com/free-photo/hands-working-digital-device-network-graphic-overlay_53876-138487.jpg?size=626&ext=jpg&ga=GA1.1.593874512.1701760367&semt=ais" alt="Slide 2"></div>
+        <div><img src="https://img.freepik.com/premium-photo/boy-playing-game-white-tablet-home-interior-bacgkround-kid-games-mobile-devices-concept_176814-717.jpg?size=626&ext=jpg&ga=GA1.1.593874512.1701760367&semt=ais" alt="Slide 3"></div>
+        <div><img src="https://legalvidhiya.com/wp-content/uploads/2022/10/image-3-1024x682.png" alt="Slide 4"></div>
+        <div><img src = "https://img.freepik.com/premium-vector/set-student-cartoon-character_1639-46567.jpg?size=626&ext=jpg&ga=GA1.1.593874512.1701760367&semt=ais" alt="slide5"></div>
+        <div><img src="https://img.freepik.com/premium-photo/asian-girl-student-online-learning-class-study-online-with-laptop-home_29488-1621.jpg?size=626&ext=jpg&ga=GA1.1.593874512.1701760367&semt=ais" alt="Slide 5"></div>
+      
+        <!-- Add more slides as needed -->
+    </div>
+
+    <div class="slider2">
+        <div><img src="slide3.jpg" alt="Slide 3"></div>
+        <div><img src="slide4.jpg" alt="Slide 4"></div>
+        <!-- Add more slides as needed -->
+    </div>
+
+   
+
+    <footer>
+        <div>Email: VidyaGuru@email.com</div>
+        <div>Phone: +1 123-456-7890</div>
+        <p style="font-size:14px;">&copy; 2024 VidyaGuru All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Configure and initialize first slider
+            $('.slider1').slick({
+                autoplay: true,
+                dots: false,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear'
+            });
+
+            // Configure and initialize second slider
+            $('.slider2').slick({
+                autoplay: true,
+                dots: false,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear'
+            });
+
+            // Smooth scrolling for internal anchor links
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+
+                var target = this.hash;
+                var $target = $(target);
+
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 800, 'swing', function () {
+                    window.location.hash = target;
+                });
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
